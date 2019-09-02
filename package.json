@@ -1,0 +1,63 @@
+{
+  "name": "instagram-api-media",
+  "version": "1.0.0",
+  "description": "Automatically calculates a media file data according to Instagram's rules.",
+  "main": "./dist/instagram-api-media.min.js",
+  "types": "./dist/instagram-api-media.d.ts",
+  "scripts": {
+    "dev": "npm run tslint && tsc --outDir dist",
+    "compile:webpack": "webpack --mode production",
+    "dev:watch": "nodemon --exec 'npm run dev || exit 1'",
+    "tslint": "tslint --project .",
+    "build": "npm run dev && webpack --mode production",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "test": "npm run clean && jest && npm run clean",
+    "test:coverage": "npm run clean && jest --coverage && npm run clean",
+    "clean": "rm -rf dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glani/instagram-api-media.git"
+  },
+  "keywords": [
+    "instagram",
+    "api",
+    "media",
+    "photo",
+    "video"
+  ],
+  "engines": {
+    "node": ">=6.13.0"
+  },
+  "author": "glani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/glani/instagram-api-media/issues"
+  },
+  "homepage": "https://github.com/glani/instagram-api-media#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.14",
+    "@types/node": "^12.7.3",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
+    "terser-webpack-plugin": "^1.4.1",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.17.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.6.2",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.test.ts",
+    "**/tests/*"
+  ],
+  "dependencies": {
+    "@types/sprintf-js": "^1.1.2",
+    "terser": "^4.2.1"
+  }
+}

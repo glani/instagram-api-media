@@ -1,0 +1,31 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended"
+  ],
+  "jsRules": {},
+  "rules": {
+    "max-line-length": [
+      true,
+      200
+    ],
+    "quotemark": [true, "single", "avoid-escape", "avoid-template"],
+    "no-console": [true, "log"],
+    "object-literal-sort-keys": [false],
+    "interface-name" : [true, "never-prefix"],
+    "ordered-imports": [
+      true,
+      {
+        "import-sources-order": "lowercase-last",
+        "named-imports-order": "lowercase-first"
+      }
+    ],
+    "directive-selector": [true, "attribute", "app", "camelCase"],
+    "component-selector": [true, "element", "app", "kebab-case"],
+
+    "object-literal-key-quotes": [true, "consistent-as-needed"],
+
+    "max-classes-per-file": [true, 1000000]
+  },
+  "rulesDirectory": []
+}
