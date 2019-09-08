@@ -1,11 +1,11 @@
 import {BaseOptions} from './BaseOptions';
 import {InstagramMedia} from './InstagramMedia';
-import {MediaDetails, PhotoDetails} from './MediaDetails';
+import {MediaDetails, VideoDetails} from './MediaDetails';
 
-export class InstagramPhoto extends InstagramMedia {
-    private details: PhotoDetails;
+export class InstagramVideo extends InstagramMedia {
+    private details: VideoDetails;
 
-    constructor(details: PhotoDetails, options?: BaseOptions) {
+    constructor(details: VideoDetails, options?: BaseOptions) {
         super(options);
         this.details = details;
     }
@@ -15,6 +15,6 @@ export class InstagramPhoto extends InstagramMedia {
     }
 
     protected isMod2CanvasRequired(): boolean {
-        return false;
+        return true;
     }
 }

@@ -1,6 +1,6 @@
 {
   "name": "instagram-api-media",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Automatically calculates a media file data according to Instagram's rules.",
   "main": "./dist/instagram-api-media.min.js",
   "types": "./dist/instagram-api-media.d.ts",
